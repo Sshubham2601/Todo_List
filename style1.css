@@ -1,0 +1,146 @@
+:root {
+	--dark: #374151;
+	--darker: #1F2937;
+	--darkest: #111827;
+	--grey: #6B7280;
+	--pink: #EC4899;
+	--purple: #8B5CF6;
+	--light: #EEE;
+}
+*{
+          padding: 0;
+          margin: 0;
+          font-family: 'poppins',sans-serif;
+          box-sizing: border-box;
+} 
+body{
+          display: flex;
+          min-height: 100vh;
+          flex-direction: column;
+          background-color: #374151 ;
+          color: white;
+
+}
+.todo-app{
+          width: 100%;
+          max-width: 740px;
+          background-color: #fff;
+          border-radius: 10px;
+          margin: 100px auto 20px;
+          padding: 40px 30px 70px;
+          box-shadow: 2px 2px 2px 2px #e20909;
+}
+header{ 
+          padding: 2em 1em;
+          max-height: 800px;
+          width: 100%;
+          margin: 0 auto;
+}
+header h1{
+          font-size: 2.5rem;
+          font-weight:300 ;
+          color:#6B7280; 
+          margin-bottom: 1rem;
+}
+#new-task-form{
+          display: flex;
+}
+input,button{
+          appearance: none;
+          border: none;
+          outline: none;
+          background: none;
+}
+#new-task-input{
+       flex: 1 1 0%;
+       border-radius: 1rem;
+       background-color: #1F2937;
+       margin: 1rem;
+       padding: 1rem;
+       color: #EEE;
+       font-size: 1.25rem;
+}
+#new-task-input::placeholder {
+          color: gray;
+}
+#new-task-submit{
+          color:#EC4899 ;
+          font-size: 1.25 rem;
+          font-weight: 900;
+         background-image: linear-gradient(to right,#EC4899 ,#8B5CF6 );
+         -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+          cursor: pointer;
+          transition: 0.4s;
+}
+#new-task-submit:hover{
+          opacity: 0.8;
+}
+#new-task-submit:active{
+          opacity: 0.6;
+}
+main{
+          flex: 1 1 0%;
+          padding: 2em 1em;
+          max-height: 800px;
+          width: 100%;
+          margin: 0 auto;
+}
+.task-list{
+          padding: 1rem;
+}
+.task-list h2{
+          font-size: 1.5rem;
+          font-weight:300 ;
+          color:#6B7280; 
+          margin-bottom: 1rem;
+}
+#tasks .task{
+          display: flex;
+          justify-content: space-between;
+          background-color:  #111827;
+          padding: 1rem;
+          margin-bottom: 1rem;
+          border-radius: 1rem;
+}
+.task .content {
+	flex: 1 1 0%;
+}
+.task .content .text {
+	color: var(--light);
+          font-size: 1.25rem;
+          width: 100%;
+          transition: 0.4s; 
+           display: block; 
+}
+.task .content .text:not(:read-only) {
+	color: var(--pink);
+}
+.task .actions {
+	display: flex;
+	margin: 0 -0.5rem;
+}
+
+.task .actions button {
+	cursor: pointer;
+          margin: 0 0.5rem;
+          font-size: 1.125rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          transition: 0.04s;
+}
+.task.actions.button:hover{
+          opacity: 0.8;
+}
+.task.actions.button:active{
+          opacity: 0.6;
+}
+.task .actions .edit {
+	background-image: linear-gradient(to right, var(--pink), var(--purple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.task .actions .delete {
+	color: crimson;
+}
+
